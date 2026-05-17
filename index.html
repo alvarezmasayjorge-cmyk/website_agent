@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valeria Rojas | Agente Inmobiliaria - Santa Cruz de la Sierra, Bolivia</title>
+
+    <!-- Meta SEO Tags -->
+    <meta name="description"
+        content="Catálogo exclusivo de propiedades de Valeria Rojas en Santa Cruz de la Sierra, Bolivia. Encuentra casas, departamentos, terrenos y locales comerciales en Equipetrol, Urubó, Las Palmas y más. Compra, vende, alquila o anticréticos.">
+    <meta name="keywords"
+        content="valeria rojas, agente inmobiliaria bolivia, bienes raices santa cruz, equipetrol alquiler, anticretico urubo, comprar casa santa cruz, inmobiliaria bolivia">
+    <meta name="author" content="Valeria Rojas">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Valeria Rojas | Catálogo de Propiedades en Santa Cruz">
+    <meta property="og:description"
+        content="Encuentra tu próximo hogar en Santa Cruz de la Sierra. Propiedades verificadas en Equipetrol, Urubó, Las Palmas, Sirari. Asesoría directa y profesional.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:type" content="website">
+
+    <!-- Premium Stylesheet Link -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JavaScript Link (deferred for speed) -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER / AGENT PROFILE -->
+    <header class="header">
+        <div class="container">
+            <div class="agent-profile">
+                <div class="agent-avatar-container">
+                    <!-- Professional Corporate Profile Image from Unsplash -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300&q=80"
+                        alt="Valeria Rojas - Agente Inmobiliaria" class="agent-avatar" loading="eager">
+                    <span class="agent-status-badge">Activo</span>
+                </div>
+
+                <div class="agent-info">
+                    <span class="agent-badge">Asesora Destacada</span>
+                    <h1 class="agent-name" id="agent-title-name">Valeria Rojas</h1>
+                    <div class="agent-title">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>Agente Inmobiliaria • Santa Cruz de la Sierra, Bolivia</span>
+                    </div>
+                    <p class="agent-bio">
+                        Más de 6 años ayudando a familias cruceñas a encontrar el hogar perfecto. Especialista en
+                        propiedades residenciales y comerciales en la zona norte y este de la ciudad.
+                    </p>
+                    <div class="agent-actions">
+                        <!-- Direct Whatsapp Action with phone +591 76543210 -->
+                        <a href="https://wa.me/59176543210?text=Hola%20Valeria,%20me%20gustar%C3%ADa%20consultar%20sobre%20tus%20propiedades%20disponibles."
+                            target="_blank" class="btn-whatsapp" id="btn-wa-header">
+                            <!-- SVG WhatsApp Icon -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.588 1.97 14.118.945 11.996.945c-5.447 0-9.87 4.372-9.874 9.802-.002 1.77.478 3.5 1.39 5.006l-1.013 3.702 3.829-1.002-.271-.16zm11.318-6.19c-.3-.149-1.777-.878-2.046-.976-.27-.098-.467-.148-.662.149-.197.297-.757.957-.927 1.154-.172.197-.344.223-.644.074-.3-.149-1.27-.469-2.419-1.494-.893-.797-1.495-1.782-1.67-2.08-.174-.299-.018-.462.13-.61.135-.133.3-.347.45-.52.149-.174.199-.298.299-.497.1-.201.05-.376-.025-.524-.075-.15-.662-1.602-.909-2.194-.24-.578-.485-.5-.662-.51-.171-.007-.367-.007-.563-.007-.197 0-.518.074-.789.373-.271.299-1.034 1.016-1.034 2.479 0 1.464 1.066 2.88 1.214 3.081.148.199 2.096 3.201 5.08 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.778-.726 2.027-1.429.25-.702.25-1.302.176-1.429-.076-.128-.271-.201-.571-.349z" />
+                            </svg>
+                            <span>WhatsApp Directo</span>
+                        </a>
+                        <div class="agent-socials">
+                            <!-- Instagram -->
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link"
+                                aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg>
+                            </a>
+                            <!-- Facebook -->
+                            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link"
+                                aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN EXCLUSIVE SECTION -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- CATEGORY NAVIGATION TABS -->
+            <nav class="tabs-container" id="category-navigation">
+                <button class="tab-btn active" data-category="comprar" id="tab-comprar">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                            d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                    <span>Comprar</span>
+                </button>
+
+                <button class="tab-btn" data-category="alquilar" id="tab-alquilar">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>Alquilar</span>
+                </button>
+                <button class="tab-btn" data-category="anticretico" id="tab-anticretico">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span>Anticrético</span>
+                </button>
+            </nav>
+
+            <!-- REACTIVE FILTERS PANEL -->
+            <section class="filters-panel" aria-label="Filtros de propiedades">
+                <div class="filters-header">
+                    <div class="filters-title">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <h2>Filtros de Búsqueda</h2>
+                    </div>
+                    <button class="btn-reset-filters" id="btn-reset-filters">Limpiar Filtros</button>
+                </div>
+
+                <div class="filters-grid">
+                    <!-- Filter: Property Type -->
+                    <div class="filter-group">
+                        <label class="filter-label" for="filter-type">Tipo de Propiedad</label>
+                        <select id="filter-type" class="custom-select">
+                            <option value="todos">Todos los Tipos</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Departamento">Departamento</option>
+                            <option value="Terreno">Terreno</option>
+                            <option value="Local Comercial">Local Comercial</option>
+                        </select>
+                    </div>
+
+                    <!-- Filter: Max Price Slider -->
+                    <div class="filter-group slider-container">
+                        <div class="slider-values">
+                            <span class="filter-label">Precio Máximo</span>
+                            <span class="slider-val-current" id="lbl-price-max">$us 300,000</span>
+                        </div>
+                        <input type="range" id="filter-price" class="range-slider" min="0" max="300000" step="500"
+                            value="300000" aria-label="Rango de precio máximo">
+                        <div class="slider-values" style="font-size: 11px; color: var(--text-muted);">
+                            <span id="lbl-price-min-limit">$us 0</span>
+                            <span id="lbl-price-max-limit">$us 300,000+</span>
+                        </div>
+                    </div>
+
+                    <!-- Filter: Bedrooms Count Segmented Control -->
+                    <div class="filter-group">
+                        <label class="filter-label">Habitaciones</label>
+                        <div class="segmented-control" id="filter-rooms" role="group"
+                            aria-label="Filtrar por número de habitaciones">
+                            <button class="segment-btn active" data-rooms="cualquiera">Cualquiera</button>
+                            <button class="segment-btn" data-rooms="1">1+</button>
+                            <button class="segment-btn" data-rooms="2">2+</button>
+                            <button class="segment-btn" data-rooms="3">3+</button>
+                            <button class="segment-btn" data-rooms="4">4+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DYNAMIC PROPERTIES LIST -->
+            <div class="properties-count" id="properties-meta-count">
+                Mostrando <span id="properties-current-count">0</span> de <span id="properties-total-count">0</span>
+                propiedades
+            </div>
+
+            <section class="properties-grid" id="properties-grid" aria-live="polite">
+                <!-- Skeleton Loader cards generated natively by JavaScript initially, 
+                     these will be instantly replaced once the properties render -->
+                <div class="property-card skeleton-loader">
+                    <div class="property-image-container"></div>
+                    <div class="property-details">
+                        <div class="skeleton-box" style="height: 14px; width: 40%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-box" style="height: 24px; width: 90%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-box" style="height: 28px; width: 60%; margin-bottom: 20px;"></div>
+                        <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                        </div>
+                        <div class="skeleton-box" style="height: 44px; width: 100%; border-radius: var(--radius-md);">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card skeleton-loader">
+                    <div class="property-image-container"></div>
+                    <div class="property-details">
+                        <div class="skeleton-box" style="height: 14px; width: 30%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-box" style="height: 24px; width: 85%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-box" style="height: 28px; width: 50%; margin-bottom: 20px;"></div>
+                        <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                        </div>
+                        <div class="skeleton-box" style="height: 44px; width: 100%; border-radius: var(--radius-md);">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card skeleton-loader">
+                    <div class="property-image-container"></div>
+                    <div class="property-details">
+                        <div class="skeleton-box" style="height: 14px; width: 45%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-box" style="height: 24px; width: 95%; margin-bottom: 12px;"></div>
+                        <div class="skeleton-box" style="height: 28px; width: 55%; margin-bottom: 20px;"></div>
+                        <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                            <div class="skeleton-box" style="height: 40px; flex: 1;"></div>
+                        </div>
+                        <div class="skeleton-box" style="height: 44px; width: 100%; border-radius: var(--radius-md);">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- PREMIUM INTERACTIVE DETAIL MODAL -->
+    <div class="modal-overlay" id="property-modal" role="dialog" aria-modal="true" aria-labelledby="modal-p-title">
+        <div class="modal-content-wrapper">
+            <!-- Close Button -->
+            <button class="btn-close-modal" id="btn-close-modal" aria-label="Cerrar modal">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+
+            <!-- Photo Gallery Slider -->
+            <div class="modal-gallery-container">
+                <div class="modal-slides" id="modal-gallery-slides">
+                    <!-- Slides loaded by JS -->
+                </div>
+
+                <!-- Nav Arrows -->
+                <button class="gallery-nav-btn btn-prev-slide" id="btn-gallery-prev" aria-label="Foto anterior">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button class="gallery-nav-btn btn-next-slide" id="btn-gallery-next" aria-label="Siguiente foto">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <!-- Indicators -->
+                <div class="gallery-dots" id="modal-gallery-dots">
+                    <!-- Dots loaded by JS -->
+                </div>
+            </div>
+
+            <!-- Modal Info Content -->
+            <div class="modal-body">
+                <div class="modal-header-meta">
+                    <span class="modal-badge" id="modal-category-badge">Badge</span>
+                    <div class="modal-location">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span id="modal-location-text">Zona, Ciudad</span>
+                    </div>
+                </div>
+
+                <h3 class="modal-title" id="modal-p-title">Título de la Propiedad en Modal</h3>
+                <div class="modal-price" id="modal-p-price">$us 0</div>
+
+                <!-- Attributes Grid -->
+                <div class="modal-grid-details">
+                    <div class="modal-feature-card">
+                        <div class="modal-feature-icon">
+                            <!-- SVG Bed -->
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M7 11v-4c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v4h3v7h-2v-2h-12v2h-2v-7h3zm2-4v4h6v-4h-6zm-7-2h2v12h-2v-12z" />
+                            </svg>
+                        </div>
+                        <span class="modal-feature-val" id="modal-val-beds">0</span>
+                        <span class="modal-feature-lbl">Habitaciones</span>
+                    </div>
+
+                    <div class="modal-feature-card">
+                        <div class="modal-feature-icon">
+                            <!-- SVG Bath -->
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M21 11c0-2.21-1.79-4-4-4h-2V6c0-1.1-.9-2-2-2H9C7.9 4 7 4.9 7 6v1H5c-2.21 0-4 1.79-4 4v2c0 4.97 4.03 9 9 9h4c4.97 0 9-4.03 9-9v-2zm-2 2c0 3.86-3.14 7-7 7h-4c-3.86 0-7-3.14-7-7v-2c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v2z" />
+                            </svg>
+                        </div>
+                        <span class="modal-feature-val" id="modal-val-baths">0</span>
+                        <span class="modal-feature-lbl">Baños</span>
+                    </div>
+
+                    <div class="modal-feature-card">
+                        <div class="modal-feature-icon">
+                            <!-- SVG Area -->
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22 2H2v20h20V2zm-2 18H4V4h16v16zm-5-9H9v2h6v-2zm0-4H9v2h6V7zm0 8H9v2h6v-2z" />
+                            </svg>
+                        </div>
+                        <span class="modal-feature-val" id="modal-val-area">0 m²</span>
+                        <span class="modal-feature-lbl">Superficie</span>
+                    </div>
+
+                    <div class="modal-feature-card">
+                        <div class="modal-feature-icon">
+                            <!-- SVG Car -->
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-5h14v5zm-1.5-3.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-11 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z" />
+                            </svg>
+                        </div>
+                        <span class="modal-feature-val" id="modal-val-parking">0</span>
+                        <span class="modal-feature-lbl">Parqueos</span>
+                    </div>
+                </div>
+
+                <!-- Long Description -->
+                <h4 class="modal-description-title">Descripción de la Propiedad</h4>
+                <p class="modal-description-text" id="modal-description-content">
+                    Detalles completos de la propiedad descritos con precisión aquí...
+                </p>
+
+                <!-- Footer CTAs -->
+                <div class="modal-footer-cta">
+                    <a href="#" target="_blank" class="btn-modal-wa" id="btn-modal-wa-cta">
+                        <!-- SVG WhatsApp -->
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.588 1.97 14.118.945 11.996.945c-5.447 0-9.87 4.372-9.874 9.802-.002 1.77.478 3.5 1.39 5.006l-1.013 3.702 3.829-1.002-.271-.16zm11.318-6.19c-.3-.149-1.777-.878-2.046-.976-.27-.098-.467-.148-.662.149-.197.297-.757.957-.927 1.154-.172.197-.344.223-.644.074-.3-.149-1.27-.469-2.419-1.494-.893-.797-1.495-1.782-1.67-2.08-.174-.299-.018-.462.13-.61.135-.133.3-.347.45-.52.149-.174.199-.298.299-.497.1-.201.05-.376-.025-.524-.075-.15-.662-1.602-.909-2.194-.24-.578-.485-.5-.662-.51-.171-.007-.367-.007-.563-.007-.197 0-.518.074-.789.373-.271.299-1.034 1.016-1.034 2.479 0 1.464 1.066 2.88 1.214 3.081.148.199 2.096 3.201 5.08 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.778-.726 2.027-1.429.25-.702.25-1.302.176-1.429-.076-.128-.271-.201-.571-.349z" />
+                        </svg>
+                        <span>Consultar por esta propiedad</span>
+                    </a>
+                    <button class="btn-modal-cancel" id="btn-modal-cancel">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Agency Info -->
+                <div class="footer-brand">
+                    <h3 class="footer-logo-title">Valeria<span>Rojas</span></h3>
+                    <p class="footer-bio">
+                        Asesoramiento inmobiliario integral en la compra, venta, alquiler y anticrético de propiedades
+                        en Santa Cruz de la Sierra. Transparencia, seriedad y profesionalismo garantizados.
+                    </p>
+                </div>
+
+                <!-- Contact Links -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Contacto</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <!-- SVG Phone -->
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>+591 76543210</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <!-- SVG Mail -->
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <span>valeria.rojas@inmobiliaria.bo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Location -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title">Oficina Central</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <!-- SVG Location Pin -->
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Edificio Empresarial Torre Norte, Piso 8. Equipetrol, Santa Cruz de la Sierra.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credits / Copyright -->
+            <div class="footer-creds">
+                <p>&copy; 2026 Valeria Rojas. Todos los derechos reservados.</p>
+                <p class="powered-by">Powered by <a href="#" target="_blank" rel="noopener">Antigravity Studio</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
