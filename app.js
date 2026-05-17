@@ -314,8 +314,20 @@ const elements = {
     modalDescription: document.getElementById("modal-description-content"),
     modalWaBtn: document.getElementById("btn-modal-wa-cta"),
     modalCancel: document.getElementById("btn-modal-cancel"),
-    modalCloseX: document.getElementById("btn-close-modal")
+    modalCloseX: document.getElementById("btn-close-modal"),
+    modalGalleryContainer: document.getElementById("modal-gallery-container"),
+
+    // Lightbox elements
+    lightbox: document.getElementById("image-lightbox"),
+    lightboxImage: document.getElementById("lightbox-image"),
+    lightboxClose: document.getElementById("lightbox-close"),
+    lightboxPrev: document.getElementById("lightbox-prev"),
+    lightboxNext: document.getElementById("lightbox-next"),
+    lightboxStage: document.getElementById("lightbox-stage"),
+    lightboxCounter: document.getElementById("lightbox-counter")
 };
+
+let lightboxIndex = 0;
 
 // --- INITIALIZE APPLICATION ---
 document.addEventListener("DOMContentLoaded", () => {
@@ -386,12 +398,90 @@ function registerEventListeners() {
         if (e.target === elements.modal) closeModal();
     });
 
-    // Keyboard ESC Close
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && elements.modal.classList.contains("active")) {
-            closeModal();
+    // Modal gallery image -> open lightbox
+    elements.modalGalleryContainer.addEventListener("click", (e) => {
+        // Don't open lightbox when clicking nav arrows / dots
+        if (e.target.closest(".gallery-nav-btn") || e.target.closest(".gallery-dot")) return;
+        if (e.target.closest("img") || e.target === elements.modalGalleryContainer || e.target.classList.contains("modal-slide")) {
+            openLightbox(activeSlideIndex);
         }
     });
+
+    // Lightbox controls
+    elements.lightboxClose.addEventListener("click", closeLightbox);
+    elements.lightboxPrev.addEventListener("click", (e) => { e.stopPropagation(); shiftLightbox(-1); });
+    elements.lightboxNext.addEventListener("click", (e) => { e.stopPropagation(); shiftLightbox(1); });
+    elements.lightbox.addEventListener("click", (e) => {
+        if (e.target === elements.lightbox || e.target === elements.lightboxStage) closeLightbox();
+    });
+
+    // Touch swipe on lightbox (mobile)
+    let touchStartX = 0;
+    elements.lightboxStage.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    elements.lightboxStage.addEventListener("touchend", (e) => {
+        const dx = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(dx) > 50) shiftLightbox(dx < 0 ? 1 : -1);
+    }, { passive: true });
+
+    // Touch swipe on modal gallery (mobile)
+    let modalTouchX = 0;
+    elements.modalGalleryContainer.addEventListener("touchstart", (e) => {
+        modalTouchX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    elements.modalGalleryContainer.addEventListener("touchend", (e) => {
+        const dx = e.changedTouches[0].screenX - modalTouchX;
+        if (Math.abs(dx) > 60) {
+            shiftSlide(dx < 0 ? 1 : -1);
+        }
+    }, { passive: true });
+
+    // Keyboard navigation (ESC + arrows)
+    document.addEventListener("keydown", (e) => {
+        if (elements.lightbox.classList.contains("active")) {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowLeft") shiftLightbox(-1);
+            if (e.key === "ArrowRight") shiftLightbox(1);
+            return;
+        }
+        if (elements.modal.classList.contains("active")) {
+            if (e.key === "Escape") closeModal();
+            if (e.key === "ArrowLeft") shiftSlide(-1);
+            if (e.key === "ArrowRight") shiftSlide(1);
+        }
+    });
+}
+
+// --- LIGHTBOX FUNCTIONS ---
+function openLightbox(startIndex) {
+    if (!currentModalSlides.length) return;
+    lightboxIndex = startIndex || 0;
+    updateLightboxImage();
+    elements.lightbox.classList.add("active");
+}
+
+function closeLightbox() {
+    elements.lightbox.classList.remove("active");
+}
+
+function shiftLightbox(direction) {
+    lightboxIndex += direction;
+    if (lightboxIndex >= currentModalSlides.length) lightboxIndex = 0;
+    if (lightboxIndex < 0) lightboxIndex = currentModalSlides.length - 1;
+    updateLightboxImage();
+}
+
+function updateLightboxImage() {
+    // Use higher-res Unsplash variant if URL supports it
+    const url = currentModalSlides[lightboxIndex];
+    const hiRes = url.replace(/w=\d+&h=\d+/, "w=1600&h=900");
+    elements.lightboxImage.src = hiRes;
+    elements.lightboxCounter.textContent = `${lightboxIndex + 1} / ${currentModalSlides.length}`;
+    // Hide nav if single image
+    const single = currentModalSlides.length <= 1;
+    elements.lightboxPrev.style.display = single ? "none" : "";
+    elements.lightboxNext.style.display = single ? "none" : "";
 }
 
 // --- SETUP TAB CONFIGURATION (PRICE SLIDERS ADJUSTMENT) ---
@@ -600,13 +690,19 @@ function createCardMarkup(p) {
         </svg>
     `;
 
+    const waCardMsg = `Hola Valeria, me interesa "${p.title}" en ${p.zone}. ¿Me das más info?`;
+    const waCardUrl = `https://wa.me/59176543210?text=${encodeURIComponent(waCardMsg)}`;
+
     return `
-        <article class="property-card fade-in" id="card-${p.id}">
+        <article class="property-card fade-in" id="card-${p.id}" data-id="${p.id}" tabindex="0" role="button" aria-label="Ver detalles de ${p.title}">
             <div class="property-image-container">
                 <span class="badge-category badge-${p.category}">${p.badge}</span>
+                <span class="image-zoom-hint" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8zm6-3a1 1 0 011 1v1h1a1 1 0 110 2H9v1a1 1 0 11-2 0V9H6a1 1 0 010-2h1V6a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                </span>
                 <img src="${p.images[0]}" alt="${p.title}" class="property-image" loading="lazy">
             </div>
-            
+
             <div class="property-details">
                 <div class="property-header-info">
                     <div class="property-location">
@@ -627,7 +723,7 @@ function createCardMarkup(p) {
                         <div class="feature-icon-container">${bedIcon}</div>
                         <span class="feature-text">${p.beds > 0 ? `${p.beds} Hab` : '--'}</span>
                     </div>
-                    
+
                     <div class="feature-item" title="Baños">
                         <div class="feature-icon-container">${bathIcon}</div>
                         <span class="feature-text">${p.baths > 0 ? `${p.baths} Bañ` : '--'}</span>
@@ -644,11 +740,37 @@ function createCardMarkup(p) {
                     </div>
                 </div>
 
-                <button class="btn-details" onclick="openDetailsModal('${p.id}')">Ver detalles</button>
+                <div class="card-actions">
+                    <button class="btn-details" type="button" data-action="details" data-id="${p.id}">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                        Ver detalles
+                    </button>
+                    <a class="btn-card-wa" href="${waCardUrl}" target="_blank" data-action="wa" aria-label="Consultar por WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.588 1.97 14.118.945 11.996.945c-5.447 0-9.87 4.372-9.874 9.802-.002 1.77.478 3.5 1.39 5.006l-1.013 3.702 3.829-1.002-.271-.16zm11.318-6.19c-.3-.149-1.777-.878-2.046-.976-.27-.098-.467-.148-.662.149-.197.297-.757.957-.927 1.154-.172.197-.344.223-.644.074-.3-.149-1.27-.469-2.419-1.494-.893-.797-1.495-1.782-1.67-2.08-.174-.299-.018-.462.13-.61.135-.133.3-.347.45-.52.149-.174.199-.298.299-.497.1-.201.05-.376-.025-.524-.075-.15-.662-1.602-.909-2.194-.24-.578-.485-.5-.662-.51-.171-.007-.367-.007-.563-.007-.197 0-.518.074-.789.373-.271.299-1.034 1.016-1.034 2.479 0 1.464 1.066 2.88 1.214 3.081.148.199 2.096 3.201 5.08 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.778-.726 2.027-1.429.25-.702.25-1.302.176-1.429-.076-.128-.271-.201-.571-.349z"/></svg>
+                    </a>
+                </div>
             </div>
         </article>
     `;
 }
+
+// --- DELEGATE: Whole card opens modal, WA button stays standalone ---
+document.addEventListener("click", (e) => {
+    const waBtn = e.target.closest('[data-action="wa"]');
+    if (waBtn) return; // let the WhatsApp link open
+    const card = e.target.closest(".property-card");
+    if (card && card.dataset.id) {
+        window.openDetailsModal(card.dataset.id);
+    }
+});
+document.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const card = document.activeElement?.closest?.(".property-card");
+    if (card && card.dataset.id) {
+        e.preventDefault();
+        window.openDetailsModal(card.dataset.id);
+    }
+});
 
 // --- OPEN DETAILS MODAL ---
 window.openDetailsModal = function(id) {

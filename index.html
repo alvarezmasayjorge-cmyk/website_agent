@@ -30,62 +30,147 @@
 
 <body>
 
-    <!-- HEADER / AGENT PROFILE -->
-    <header class="header">
-        <div class="container">
-            <div class="agent-profile">
-                <div class="agent-avatar-container">
-                    <!-- Professional Corporate Profile Image from Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300&q=80"
-                        alt="Valeria Rojas - Agente Inmobiliaria" class="agent-avatar" loading="eager">
-                    <span class="agent-status-badge">Activo</span>
+    <!-- HERO LANDING SECTION -->
+    <header class="hero">
+        <div class="hero-bg" aria-hidden="true">
+            <span class="hero-blob hero-blob-1"></span>
+            <span class="hero-blob hero-blob-2"></span>
+            <span class="hero-blob hero-blob-3"></span>
+            <span class="hero-grid"></span>
+            <span class="hero-noise"></span>
+        </div>
+
+        <div class="container hero-container">
+            <!-- LEFT: COPY -->
+            <div class="hero-copy">
+                <span class="hero-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Asesora #1 en Santa Cruz · 2025
+                </span>
+
+                <h1 class="hero-headline">
+                    <span class="headline-line">Encuentra el</span>
+                    <span class="headline-line headline-accent">hogar perfecto</span>
+                    <span class="headline-line">en Santa Cruz.</span>
+                </h1>
+
+                <p class="hero-subhead">
+                    Soy <strong>Valeria Rojas</strong> — agente inmobiliaria certificada con +6 años conectando
+                    familias cruceñas con propiedades verificadas en <strong>Equipetrol, Urubó, Sirari y Las Palmas</strong>.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="https://wa.me/59176543210?text=Hola%20Valeria,%20me%20gustar%C3%ADa%20consultar%20sobre%20tus%20propiedades%20disponibles."
+                       target="_blank" class="btn-whatsapp" id="btn-wa-header">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.588 1.97 14.118.945 11.996.945c-5.447 0-9.87 4.372-9.874 9.802-.002 1.77.478 3.5 1.39 5.006l-1.013 3.702 3.829-1.002-.271-.16zm11.318-6.19c-.3-.149-1.777-.878-2.046-.976-.27-.098-.467-.148-.662.149-.197.297-.757.957-.927 1.154-.172.197-.344.223-.644.074-.3-.149-1.27-.469-2.419-1.494-.893-.797-1.495-1.782-1.67-2.08-.174-.299-.018-.462.13-.61.135-.133.3-.347.45-.52.149-.174.199-.298.299-.497.1-.201.05-.376-.025-.524-.075-.15-.662-1.602-.909-2.194-.24-.578-.485-.5-.662-.51-.171-.007-.367-.007-.563-.007-.197 0-.518.074-.789.373-.271.299-1.034 1.016-1.034 2.479 0 1.464 1.066 2.88 1.214 3.081.148.199 2.096 3.201 5.08 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.778-.726 2.027-1.429.25-.702.25-1.302.176-1.429-.076-.128-.271-.201-.571-.349z"/>
+                        </svg>
+                        <span>Hablar por WhatsApp</span>
+                    </a>
+                    <a href="#properties-grid" class="btn-explore">
+                        <span>Ver propiedades</span>
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
                 </div>
 
-                <div class="agent-info">
-                    <span class="agent-badge">Asesora Destacada</span>
-                    <h1 class="agent-name" id="agent-title-name">Valeria Rojas</h1>
-                    <div class="agent-title">
-                        <svg viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <span>Agente Inmobiliaria • Santa Cruz de la Sierra, Bolivia</span>
+                <!-- INLINE STATS -->
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">+250</span>
+                        <span class="hero-stat-label">Familias felices</span>
                     </div>
-                    <p class="agent-bio">
-                        Más de 6 años ayudando a familias cruceñas a encontrar el hogar perfecto. Especialista en
-                        propiedades residenciales y comerciales en la zona norte y este de la ciudad.
-                    </p>
-                    <div class="agent-actions">
-                        <!-- Direct Whatsapp Action with phone +591 76543210 -->
-                        <a href="https://wa.me/59176543210?text=Hola%20Valeria,%20me%20gustar%C3%ADa%20consultar%20sobre%20tus%20propiedades%20disponibles."
-                            target="_blank" class="btn-whatsapp" id="btn-wa-header">
-                            <!-- SVG WhatsApp Icon -->
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.588 1.97 14.118.945 11.996.945c-5.447 0-9.87 4.372-9.874 9.802-.002 1.77.478 3.5 1.39 5.006l-1.013 3.702 3.829-1.002-.271-.16zm11.318-6.19c-.3-.149-1.777-.878-2.046-.976-.27-.098-.467-.148-.662.149-.197.297-.757.957-.927 1.154-.172.197-.344.223-.644.074-.3-.149-1.27-.469-2.419-1.494-.893-.797-1.495-1.782-1.67-2.08-.174-.299-.018-.462.13-.61.135-.133.3-.347.45-.52.149-.174.199-.298.299-.497.1-.201.05-.376-.025-.524-.075-.15-.662-1.602-.909-2.194-.24-.578-.485-.5-.662-.51-.171-.007-.367-.007-.563-.007-.197 0-.518.074-.789.373-.271.299-1.034 1.016-1.034 2.479 0 1.464 1.066 2.88 1.214 3.081.148.199 2.096 3.201 5.08 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.778-.726 2.027-1.429.25-.702.25-1.302.176-1.429-.076-.128-.271-.201-.571-.349z" />
-                            </svg>
-                            <span>WhatsApp Directo</span>
-                        </a>
-                        <div class="agent-socials">
-                            <!-- Instagram -->
-                            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link"
-                                aria-label="Instagram">
-                                <svg width="20" height="20" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                                </svg>
-                            </a>
-                            <!-- Facebook -->
-                            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link"
-                                aria-label="Facebook">
-                                <svg width="20" height="20" viewBox="0 0 24 24">
-                                    <path
-                                        d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
-                                </svg>
-                            </a>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">+6 <small>años</small></span>
+                        <span class="hero-stat-label">De experiencia</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">4.9<small>★</small></span>
+                        <span class="hero-stat-label">Calificación</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: HERO PHOTO -->
+            <div class="hero-visual">
+                <div class="hero-photo-wrap">
+                    <div class="hero-photo-glow" aria-hidden="true"></div>
+                    <div class="hero-photo-frame">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&h=1200&q=85"
+                             alt="Valeria Rojas - Agente Inmobiliaria" class="hero-photo" loading="eager">
+                        <div class="hero-photo-overlay" aria-hidden="true"></div>
+                    </div>
+
+                    <!-- FLOATING CARDS -->
+                    <div class="float-card float-card-tl">
+                        <span class="float-card-icon float-icon-green">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        </span>
+                        <div>
+                            <div class="float-card-value">Disponible</div>
+                            <div class="float-card-label">Respuesta &lt; 1 hora</div>
                         </div>
                     </div>
+
+                    <div class="float-card float-card-tr">
+                        <span class="float-card-icon float-icon-gold">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </span>
+                        <div>
+                            <div class="float-card-value">4.9 <small>de 5</small></div>
+                            <div class="float-card-label">+180 reseñas</div>
+                        </div>
+                    </div>
+
+                    <div class="float-card float-card-bl">
+                        <span class="float-card-icon float-icon-blue">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/></svg>
+                        </span>
+                        <div>
+                            <div class="float-card-value">100% Verificado</div>
+                            <div class="float-card-label">Propiedades legales</div>
+                        </div>
+                    </div>
+
+                    <div class="float-card float-card-br">
+                        <span class="float-card-icon float-icon-purple">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                        </span>
+                        <div>
+                            <div class="float-card-value">+250</div>
+                            <div class="float-card-label">Propiedades vendidas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRUST BAR (bottom) -->
+        <div class="container">
+            <div class="trust-bar" aria-label="Garantías">
+                <div class="trust-item">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Propiedades 100% verificadas</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+                    <span>Asesoría legal incluida</span>
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .2.08.39.22.53l3 3a.75.75 0 101.06-1.06L10.75 9.69V5z" clip-rule="evenodd"/></svg>
+                    <span>Respuesta en menos de 1 hora</span>
+                </div>
+                <div class="trust-item">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="trust-social" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="trust-social" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                    </a>
+                    <a href="tel:+59176543210" class="trust-social" aria-label="Llamar">
+                        <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -256,7 +341,13 @@
             </button>
 
             <!-- Photo Gallery Slider -->
-            <div class="modal-gallery-container">
+            <div class="modal-gallery-container" id="modal-gallery-container">
+                <span class="gallery-zoom-hint" aria-hidden="true">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.7 1.7L14.4 7l2.3 2.3a1 1 0 01-1.4 1.4L13 8.4l-2.3 2.3a1 1 0 01-1.4-1.4L11.6 7 9.3 4.7A1 1 0 0110 3H6a1 1 0 00-1 1v6a1 1 0 01-2 0V6zm14 8a1 1 0 011 1v1a3 3 0 01-3 3H5a1 1 0 01-.7-1.7L6.6 14H5a1 1 0 010-2h5a1 1 0 01.7 1.7L8.4 16H15a1 1 0 001-1v-1a1 1 0 011-1z" clip-rule="evenodd"/>
+                    </svg>
+                    Toca para ampliar
+                </span>
                 <div class="modal-slides" id="modal-gallery-slides">
                     <!-- Slides loaded by JS -->
                 </div>
@@ -371,6 +462,39 @@
             </div>
         </div>
     </div>
+
+    <!-- FULLSCREEN IMAGE LIGHTBOX -->
+    <div class="lightbox-overlay" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen ampliada">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar visor">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Imagen anterior">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente imagen">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+            </svg>
+        </button>
+        <div class="lightbox-stage" id="lightbox-stage">
+            <img id="lightbox-image" alt="Foto ampliada de la propiedad">
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter">1 / 1</div>
+    </div>
+
+    <!-- FLOATING WHATSAPP BUTTON (Mobile Conversion Booster) -->
+    <a href="https://wa.me/59176543210?text=Hola%20Valeria,%20vi%20tu%20cat%C3%A1logo%20y%20me%20interesa%20una%20propiedad."
+       target="_blank" class="fab-whatsapp" id="fab-whatsapp" aria-label="Contactar por WhatsApp">
+        <span class="fab-pulse" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.588 1.97 14.118.945 11.996.945c-5.447 0-9.87 4.372-9.874 9.802-.002 1.77.478 3.5 1.39 5.006l-1.013 3.702 3.829-1.002-.271-.16zm11.318-6.19c-.3-.149-1.777-.878-2.046-.976-.27-.098-.467-.148-.662.149-.197.297-.757.957-.927 1.154-.172.197-.344.223-.644.074-.3-.149-1.27-.469-2.419-1.494-.893-.797-1.495-1.782-1.67-2.08-.174-.299-.018-.462.13-.61.135-.133.3-.347.45-.52.149-.174.199-.298.299-.497.1-.201.05-.376-.025-.524-.075-.15-.662-1.602-.909-2.194-.24-.578-.485-.5-.662-.51-.171-.007-.367-.007-.563-.007-.197 0-.518.074-.789.373-.271.299-1.034 1.016-1.034 2.479 0 1.464 1.066 2.88 1.214 3.081.148.199 2.096 3.201 5.08 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.778-.726 2.027-1.429.25-.702.25-1.302.176-1.429-.076-.128-.271-.201-.571-.349z"/>
+        </svg>
+        <span class="fab-label">¿Te interesa?<br><strong>Escríbeme</strong></span>
+    </a>
 
     <!-- MAIN FOOTER -->
     <footer class="footer">
